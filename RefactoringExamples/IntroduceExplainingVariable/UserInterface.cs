@@ -1,4 +1,6 @@
-﻿namespace RefactoringExamples.IntroduceExplainingVariable
+﻿using System;
+
+namespace RefactoringExamples.IntroduceExplainingVariable
 {
     public class UserInterface
     {
@@ -18,7 +20,10 @@
 
         public void React(string platform, string browser, int resize)
         {
-            if ((platform.ToUpper().IndexOf("MAC") > -1) && (browser.ToUpper().IndexOf("IE") > -1) && WasInitialised() &&
+            bool isMacOs = platform.ToUpper().IndexOf("MAC", StringComparison.Ordinal) > -1;
+            bool isIeBrowser = browser.ToUpper().IndexOf("IE", StringComparison.Ordinal) > -1;
+
+            if (isMacOs && isIeBrowser && WasInitialised() &&
                 resize > 0)
             {
                 DoSomething();

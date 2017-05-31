@@ -15,9 +15,13 @@ namespace RefactoringExamples.IntroduceExplainingVariable
 
         public double Price()
         {
-            return _quantity*_itemPrice -
-                   Math.Max(0, _quantity - 500)*_itemPrice*.05 +
-                   Math.Min(_quantity*_itemPrice*.1, 100.0);
+            double basePrice = _quantity*_itemPrice;
+            double quantityDiscount = Math.Max(0, _quantity - 500)*_itemPrice*.05;
+            double shipping = Math.Min(basePrice*.1, 100.0);
+
+            return basePrice -
+                   quantityDiscount +
+                   shipping;
         }
     }
 }
