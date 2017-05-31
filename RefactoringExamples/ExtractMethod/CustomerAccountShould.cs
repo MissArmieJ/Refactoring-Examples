@@ -1,6 +1,5 @@
- using System.Collections.Generic;
- using NSubstitute;
- using NUnit.Framework;
+using NSubstitute;
+using NUnit.Framework;
 
 namespace RefactoringExamples.ExtractMethod
 {
