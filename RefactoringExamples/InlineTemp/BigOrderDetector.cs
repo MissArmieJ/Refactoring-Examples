@@ -4,8 +4,7 @@
     {
         public bool IsBig(Order order)
         {
-            var basePrice = order.BasePrice;
-            return basePrice > 1000;
+            return order.BasePrice > 1000;
         }
     }
 }
