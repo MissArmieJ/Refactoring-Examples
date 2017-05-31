@@ -11,12 +11,7 @@
 
         public int GetRating()
         {
-            return (MoreThanFiveLateDeliveries()) ? 2 : 1;
-        }
-
-        private bool MoreThanFiveLateDeliveries()
-        {
-            return _numberOfLateDeliveries > 5;
+            return _numberOfLateDeliveries > 5 ? 2 : 1;
         }
     }
 }
