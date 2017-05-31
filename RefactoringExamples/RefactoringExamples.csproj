@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="ExtractClass\PersonShould.cs" />
     <Compile Include="ExtractClass\Person.cs" />
+    <Compile Include="ExtractClass\TelephoneNumber.cs" />
     <Compile Include="ExtractMethod\CustomerAccount.cs" />
     <Compile Include="ExtractMethod\CustomerAccountShould.cs" />
     <Compile Include="ExtractMethod\IOutput.cs" />

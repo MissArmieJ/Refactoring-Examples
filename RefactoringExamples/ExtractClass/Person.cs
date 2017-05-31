@@ -3,29 +3,22 @@
     public class Person
     {
         private readonly string _name;
-        private string _officeAreaCode;
-        private string _officeNumber;
+        private readonly TelephoneNumber _officeTelephoneNumber;
 
         public Person(string name, string officeAreaCode, string officeNumber)
         {
             _name = name;
-            OfficeAreaCode = officeAreaCode;
-            OfficeNumber = officeNumber;
+            _officeTelephoneNumber = new TelephoneNumber(officeAreaCode, officeNumber);
         }
 
-        public string Name { get { return _name; } }
-        public string TelephoneNumber { get { return "(" + _officeAreaCode + ") " + _officeNumber; } }
-
-        private string OfficeAreaCode
+        public string GetName()
         {
-            get { return _officeAreaCode; }
-            set { _officeAreaCode = value; }
+            return _name;
         }
 
-        string OfficeNumber
+        public string GetOfficeTelephoneNumber()
         {
-            get { return _officeNumber; }
-            set { _officeNumber = value; }
+            return "(" + _officeTelephoneNumber.GetAreaCode() + ") " + _officeTelephoneNumber.GetNumber();
         }
     }
 }

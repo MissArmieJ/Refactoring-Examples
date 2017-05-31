@@ -12,7 +12,7 @@ namespace RefactoringExamples.ExtractClass
             const string officeNumber = "1234 5678";
             var bloggs = new Person("Bloggs", officeAreaCode, officeNumber);
 
-            Assert.That(bloggs.TelephoneNumber, Is.EqualTo($"({officeAreaCode}) {officeNumber}"));
+            Assert.That(bloggs.GetOfficeTelephoneNumber(), Is.EqualTo($"({officeAreaCode}) {officeNumber}"));
 
         }
     }
